@@ -15,7 +15,6 @@ const GET_MOVIE = gql`
     }
     suggestions(id: $id) {
       id
-      title
       medium_cover_image
     }
   }
@@ -74,7 +73,6 @@ export default () => {
         <Description>{data?.movie?.description_intro}</Description>
       </Column>
       <Poster bg={data?.movie?.medium_cover_image}></Poster>
-      {/* <h1>{data?.suggestions?.map((s) => s.title)}</h1> */}
     </Container>
   );
 };
